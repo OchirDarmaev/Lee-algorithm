@@ -7,7 +7,7 @@ namespace Finder
     {
         static void Main(string[] args)
         {
-
+            var rand = new Random();
             const int heigth = 10;
             const int width = 18;
             while (true)
@@ -17,7 +17,7 @@ namespace Finder
                 {
                     for (int j = 0; j < width; j++)
                     {
-                        var rand = new Random(unchecked((int)DateTime.Now.Millisecond));
+                        
                         if (rand.Next(100) > 70)
                             my[i, j] = (int)Figures.Barrier;
                         else
